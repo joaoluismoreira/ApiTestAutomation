@@ -17,6 +17,12 @@ it('get single user should return a 200 response', function (done) {
         .expect(200, done);
 });
 
+it('delete single user should return a 200 response', function (done) {
+    api.delete('/users/2')
+        .set('Accept', 'application/json')
+        .expect(204, done);
+});
+
 it('get single resource should return a 200 response and have correct response body', function (done) {
     api.get('/unknown/2')
         .set('Accept', 'application/json')
@@ -53,6 +59,20 @@ it('post create user should return a 200 response and create the correct user', 
             expect(res.body.id).to.not.equal(null);
             expect(res.body).to.have.property("createdAt");
             expect(res.body.createdAt).to.not.equal(null);
+            done();
+        });
+});
+
+it('post unsuccessful login response 400 and error msg', function (done) {
+    api.post('/login')
+        .set('Accept', 'application/json')
+        .send({
+            email: "peter@klaven"
+        })
+        .expect(400)
+        .end(function (err, res) {
+            expect(res.body).to.have.property("error");
+            expect(res.body.error).to.equal('Missing password');
             done();
         });
 });
