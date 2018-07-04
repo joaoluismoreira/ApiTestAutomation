@@ -1,18 +1,16 @@
 <testsuites name="Mocha Tests">
-  <testsuite name="requests" tests="6" errors="0" failures="0" skipped="0" timestamp="2018-07-04T20:12:48" time="3.244">
-    <testcase classname="requests" name="get users list should return a 200 response" time="0.557">
+  <testsuite name="requests" tests="6" errors="0" failures="0" skipped="0" timestamp="2018-07-04T20:47:03" time="3.044">
+    <testcase classname="requests" name="get users list should return a 200 response" time="0.561">
     </testcase>
     <testcase classname="requests" name="get single user should return a 200 response" time="0.594">
     </testcase>
-    <testcase classname="requests" name="delete single user should return a 200 response" time="0.601">
+    <testcase classname="requests" name="delete single user should return a 200 response" time="0.351">
     </testcase>
-    <testcase classname="requests" name="get single resource should return a 200 response and have correct response body" time="0.347">
+    <testcase classname="requests" name="get single resource should return a 200 response and have correct response body" time="0.652">
     </testcase>
-    <testcase classname="requests" name="post create user should return a 200 response and create the correct user" time="0.557">
+    <testcase classname="requests" name="post create user should return a 200 response and create the correct user" time="0.53">
     </testcase>
-    <testcase classname="requests" name="post unsuccessful login response 400 and error msg" time="0.582">
-      <system-out><![CDATA[{ error: 'Missing password' }
-]]></system-out>
+    <testcase classname="requests" name="post unsuccessful login response 400 and error msg" time="0.35">
     </testcase>
   </testsuite>
 </testsuites>
